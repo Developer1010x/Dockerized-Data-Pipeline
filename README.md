@@ -174,16 +174,7 @@ schedule_interval='0 9-16 * * 1-5'
 
 The pipeline includes comprehensive error handling:
 
-### API Errors
-- **Rate Limiting**: Automatic backoff and retry
-- **Invalid Symbols**: Graceful handling with logging
-- **Network Issues**: Exponential backoff with 3 retry attempts
-- **API Key Issues**: Clear error messages and validation
 
-### Database Errors
-- **Connection Failures**: Automatic retry with connection pooling
-- **Data Conflicts**: UPSERT operations to handle duplicates
-- **Transaction Management**: Rollback on errors to maintain consistency
 
 ### Pipeline Resilience
 - **Individual Task Failures**: Pipeline continues for other symbols
